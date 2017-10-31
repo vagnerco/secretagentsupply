@@ -1,6 +1,9 @@
 /*Global Variables*/
 html{
   color: white;
+  font-size: 18px;
+  font-family: Helvetica;
+
 }
 span{
   display: block;
@@ -10,37 +13,34 @@ span{
 
 /*Flex Container*/
 .fc{
-  width: 1000px;
+  width: 960px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   align-items: center;
 }
-h1{
-  font-size: 30px;
-  font-weight: bold;
-}
+
 /*Header CSS*/
 header{
   display: flex;
-  height: 100px;
   overflow: auto;
   z-index: 10;
   background-color: black;
 }
 header img{
-  height: 50px;
+  height: 1.5rem;
   width: auto;
-  padding: 1rem;
+  padding: 0 1rem 0 0.5rem;
 }
 header h2{
   display: inline-flex;
-  padding: auto;
+  padding: 0.66rem 0;
+  font-size: 1rem;
 }
 
 /*Banner*/
 .banner{
-  height: 500px;
+  height: 25rem;
   display: flex;
   background-image: url("../images/moto.jpeg");
   background-repeat: no-repeat;
@@ -48,20 +48,28 @@ header h2{
   background-size: cover;
 }
 #headline{
-  width: 400px;
-  height: 200px;
+  width: 20rem;
   background-color: black;
   margin: auto 0;
 }
-#headline h1, h3{
+#headline h1{
   display: block;
   margin: 1.5em;
   text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 0.25rem 0 0 3rem;
 }
-
+#headline h3{
+  display: block;
+  margin: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 2rem 0 0.25rem 3rem;
+}
 /*NAV*/
 nav{
-  background-color: red;
+  background-color: firebrick;
 }
 nav ul{
     width: 100%;
@@ -70,14 +78,14 @@ nav ul{
 }
 nav li{
       display: list-item;
-      padding: 10px;
+      padding: 0.75rem 0;
 }
 
 /*Main Content with Product List*/
 main .fc{
   display: flex;
   justify-content: space-between;
-  margin: 3em auto 0 auto;
+  margin: 3em auto 3em auto;
 }
 .product{
   width: 30%;
@@ -101,24 +109,24 @@ main .fc{
 }
 /*Location and Hours styling*/
 .lochours{
-  padding: 5em 1em 1em 1em;
-  width: 40%;
+  padding-top: 3rem;
+  width: 35%;
 }
 .box{
   background-color: black;
   text-align: left;
-  padding: 1em;
+  padding: 2rem 1rem;
 }
 .blacktext{
   color: black;
   text-align: left;
-  padding: 1em;
 }
 
 /*Footer*/
 footer {
-  padding: 5em;
+  margin-top: 4rem;
+  padding: 2.5rem;
   background-color: black;
   width: 100%
-  text-align: center;
+  text-align: left;
 }
