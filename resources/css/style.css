@@ -13,19 +13,26 @@ span{
 
 /*Flex Container*/
 .fc{
-  width: 960px;
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
   align-items: center;
+}
+/*Container*/
+.c{
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /*Header CSS*/
 header{
+  width: 100%
   display: flex;
   overflow: auto;
   z-index: 10;
   background-color: black;
+  justify-content: flex-start;
 }
 header img{
   height: 1.5rem;
@@ -33,48 +40,47 @@ header img{
   padding: 0 1rem 0 0.5rem;
 }
 header h2{
-  display: inline-flex;
   padding: 0.66rem 0;
   font-size: 1rem;
 }
 
 /*Banner*/
 .banner{
+  width: 100%;
   height: 25rem;
-  display: flex;
   background-image: url("../images/moto.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  justify-content: flex-start;
 }
 #headline{
-  width: 20rem;
   background-color: black;
-  margin: auto 0;
+  width: 20em;
+  padding: 2em 3em;
+  position: relative;
+  top: 9em;
 }
 #headline h1{
-  display: block;
-  margin: 1.5em;
-  text-align: center;
-  font-size: 2rem;
+  font-size: 2em;
+  line-height: 1.2em;
+  margin: 0.25em 0;
   font-weight: bold;
-  padding-top: 0.25rem 0 0 3rem;
 }
 #headline h3{
-  display: block;
-  margin: 1.5em;
-  text-align: center;
   font-weight: bold;
-  padding-top: 2rem 0 0.25rem 3rem;
 }
 /*NAV*/
-nav{
+nav {
   background-color: firebrick;
 }
-nav ul{
+nav .desktop{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+nav .tablet{
+  display: none;
 }
 nav li{
       display: list-item;
@@ -87,7 +93,13 @@ main .fc{
   justify-content: space-between;
   margin: 3em auto 3em auto;
 }
-.product{
+.product-pen{
+  width: 30%;
+}
+.product-watch{
+  width: 30%;
+}
+.product-glasses{
   width: 30%;
 }
 .productimg{
@@ -129,4 +141,66 @@ footer {
   background-color: black;
   width: 100%
   text-align: left;
+}
+
+/*Tablet Code*/
+@media only screen and (max-width: 1024px) {
+
+nav  .desktop{
+      display: none;
+  }
+
+nav .tablet{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  }
+  .product-pen{
+    width: 47%;
+  }
+  .product-watch{
+    width: 47%;
+  }
+  .product-glasses{
+    display: none;
+  }
+}
+
+/*Mobile Screen*/
+@media only screen and (max-width: 470px) {
+  .product-pen{
+    width: 90%;
+  }
+  .product-watch{
+    display: none;
+  }
+  .product-glasses{
+    display: none;
+  }
+  #headline{
+    width: 100%;
+    background-color: black;
+    margin: auto 0;
+    padding: 2rem 1rem 1rem 3rem;
+  }
+  main .fc{
+    display: flex;
+    justify-content: center;
+    margin: 3em auto 3em auto;
+    flex-direction: column;
+  }
+  .lochours{
+    padding-top: 3rem;
+    width: 80%;
+  }
+  .box{
+    background-color: black;
+    text-align: left;
+    padding: 1rem 1rem;
+  }
+  footer {
+    margin-top: 4rem;
+    background-color: black;
+    text-align: center;
+  }
 }
